@@ -21,7 +21,7 @@ class PipelineStack(core.Stack):
         output=source_artifact,
         oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_PIPELINE'),
         owner='chilcano',
-        repo='aws-cdk-pipelines-examples',
+        repo='aws-cdk-pipeline-examples',
         branch='main',
         trigger=cpactions.GitHubTrigger.POLL),
 
