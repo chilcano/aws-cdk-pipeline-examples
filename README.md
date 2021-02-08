@@ -10,15 +10,14 @@
 $ mkdir lambda-py; cd lambda-py
 $ cdk init --language=python
 
-# if you come from other python project
 $ deactivate
 
 $ python3 -m venv .venv
 
 $ source .venv/bin/activate
 
+# only when cdk project is created
 $ pip install aws-cdk.core aws-cdk.pipelines aws-cdk.aws-codepipeline aws-cdk.aws-codepipeline-actions aws-cdk.aws-codedeploy aws-cdk.aws-apigateway aws-cdk.aws-lambda pytest requests pylint
-
 $ pip freeze > requirements.txt
 
 # only if you have populate this file
