@@ -6,7 +6,7 @@ from hello_lambda_py.pipeline_stack import PipelineStack
 
 app = core.App()
 
-PipelineStack(app, 'Pipeline-QuickSight-Stack-Temp01', env={
+PipelineStack(app, 'Pipeline-HelloLambda-Stack', env={
     'account': '601163517885',
     'region': 'eu-west-2',
 })
