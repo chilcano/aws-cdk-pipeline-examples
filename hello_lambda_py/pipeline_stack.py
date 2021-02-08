@@ -23,8 +23,8 @@ class PipelineStack(core.Stack):
         owner='chilcano',
         repo='aws-cdk-pipeline-examples',
         #branch='main',
-        branch='hello-lambda-py',
-        trigger=cpactions.GitHubTrigger.POLL),
+        branch='hello-lambda-py', 
+        trigger=cpactions.GitHubTrigger.POLL), 
 
       synth_action=pipelines.SimpleSynthAction(
         source_artifact=source_artifact,
