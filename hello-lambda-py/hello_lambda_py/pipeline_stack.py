@@ -22,7 +22,8 @@ class PipelineStack(core.Stack):
         oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_PIPELINE'),
         owner='chilcano',
         repo='aws-cdk-pipeline-examples',
-        branch='main',
+        #branch='main',
+        branch='hello-lambda-py',
         trigger=cpactions.GitHubTrigger.POLL),
 
       synth_action=pipelines.SimpleSynthAction(
