@@ -32,7 +32,7 @@ class PipelineStack(core.Stack):
         install_command='npm install -g aws-cdk && pip install -r requirements.txt',
         synth_command='cdk synth'))
 
-    pipeline.add_application_stage(HelloWebserviceStage(self, 'Pre-Prod', env={
+    pipeline.add_application_stage(HelloLambdaWebserviceStage(self, 'Pre-Prod', env={
         'account': '601163517885',
         'region': 'eu-west-2',
         }))
