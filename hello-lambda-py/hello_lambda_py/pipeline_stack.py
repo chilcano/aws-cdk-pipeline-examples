@@ -14,7 +14,7 @@ class PipelineStack(core.Stack):
 
     pipeline = pipelines.CdkPipeline(self, 'Pipeline',
       cloud_assembly_artifact=cloud_assembly_artifact,
-      pipeline_name='Pipeline-CI-CD-QuickSight',
+      pipeline_name='Pipeline-QuickSight-Temp01',
 
       source_action=cpactions.GitHubSourceAction(
         action_name='GitHub',
@@ -22,6 +22,7 @@ class PipelineStack(core.Stack):
         oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_PIPELINE'),
         owner='chilcano',
         repo='aws-cdk-pipelines-examples',
+        branch='main',
         trigger=cpactions.GitHubTrigger.POLL),
 
       synth_action=pipelines.SimpleSynthAction(
