@@ -6,17 +6,17 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="pipeline_mtls_authn",
+    name="Hello Lambda Python",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="A Pipeline to deploy Hello Lambda in Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="Chilcano",
 
-    package_dir={"": "pipeline_mtls_authn"},
-    packages=setuptools.find_packages(where="pipeline_mtls_authn"),
+    package_dir={"": "hello_lambda_py"},
+    packages=setuptools.find_packages(where="hello_lambda_py"),
 
     install_requires=[
         "aws-cdk.core==1.87.1",

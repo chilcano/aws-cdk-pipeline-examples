@@ -1,14 +1,16 @@
 
-# DevOps Playground - Mutual TLS Authn for Microservices
+# Lambda Pipeline in Python
 
 
 ## Steps
 
-```
-$ mkdir pipeline-mtls-authn; cd pipeline-mtls-authn
+### 1. Ini your cdk python project
+
+```sh
+$ mkdir lambda-py; cd lambda-py
 $ cdk init --language=python
 
-// if you come from other python project
+# if you come from other python project
 $ deactivate
 
 $ python3 -m venv .venv
@@ -19,17 +21,25 @@ $ pip install aws-cdk.core aws-cdk.pipelines aws-cdk.aws-codepipeline aws-cdk.aw
 
 $ pip freeze > requirements.txt
 
-// only if you have populate this file
+# only if you have populate this file
 $ pip install -r requirements.txt
 ```
 
-write your code
+### 2. Write your code
 ```
 $ code .
 ```
 
+### 3. Configure your AWS account
 
-At this point you can now synthesize the CloudFormation template for this code.
+```sh
+export AWS_ACCESS_KEY_ID="AKIA...."
+export AWS_SECRET_ACCESS_KEY="AvO..."
+export AWS_DEFAULT_REGION="eu-west-2"
+``` 
+
+### 4. Deploy the CDK project
+
 ```
 $ cdk synth
 
