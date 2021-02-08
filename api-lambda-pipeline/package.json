@@ -1,0 +1,37 @@
+{
+  "name": "api-lambda-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "api-lambda-pipeline": "bin/api-lambda-pipeline.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.87.1",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "aws-cdk": "1.87.1",
+    "cross-env": "^7.0.3",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.87.1",
+    "@aws-cdk/aws-cloudfront": "^1.87.1",
+    "@aws-cdk/aws-codebuild": "^1.87.1",
+    "@aws-cdk/aws-codedeploy": "^1.87.1",
+    "@aws-cdk/aws-codepipeline": "^1.87.1",
+    "@aws-cdk/aws-codepipeline-actions": "^1.87.1",
+    "@aws-cdk/aws-lambda": "^1.87.1",
+    "@aws-cdk/core": "1.87.1",
+    "aws-lambda-fastify": "^1.4.4",
+    "source-map-support": "^0.5.16"
+  }
+}
