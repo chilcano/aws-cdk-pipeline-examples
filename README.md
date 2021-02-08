@@ -60,4 +60,23 @@ $ git branch -M main
 $ git add . && git commit -m "1st commit" && git push -uf origin main
 ```
 
+### 5. Testing
 
+Go to `AWS Console > CloudFormation > Stacks` and there you will see the Cfn Stack the PipelineStack created. In my case is `Pre-Prod-HelloWebservice`, once selected get the output variables, specifically the `HelloLambdaUrl` to call to HelloLambda. 
+
+```sh
+$ aws cloudformation list-stacks --query "StackSummaries[][StackName]" --output text | grep Hello
+Pre-Prod-HelloWebservice
+
+$ aws cloudformation describe-stacks --stack-name "Pre-Prod-HelloWebservice" --query "Stacks[].Outputs[]"
+[
+    {
+        "OutputKey": "GatewayEndpoint4DF49EE0",
+        "OutputValue": "https://tsm0wvtdj7.execute-api.eu-west-2.amazonaws.com/prod/"
+    },
+    {
+        "OutputKey": "HelloLambdaUrl",
+        "OutputValue": "https://tsm0wvtdj7.execute-api.eu-west-2.amazonaws.com/prod/"
+    }
+]
+```

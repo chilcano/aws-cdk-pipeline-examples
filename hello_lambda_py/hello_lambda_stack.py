@@ -16,9 +16,9 @@ class HelloLambdaStack(core.Stack):
             handler='handler.handler',
             code=lmb.Code.from_asset(path.join(this_dir, 'hello_lambda')))
 
-        gw = apigw.LambdaRestApi(self, 'Gateway',
-            description='Endpoint for a simple Lambda-powered web service!!!',
+        gw = apigw.LambdaRestApi(self, 'APIGatewayHelloLambdaWebservice',
+            description='Endpoint for HelloLambdaWebservice',
             handler=handler.current_version)
         
-        self.url_output = core.CfnOutput(self, 'Url',
+        self.url_output = core.CfnOutput(self, 'HelloLambdaUrl', 
             value=gw.url)
