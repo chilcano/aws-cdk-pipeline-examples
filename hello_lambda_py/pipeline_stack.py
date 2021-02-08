@@ -3,7 +3,7 @@ from aws_cdk import aws_codepipeline as codepipeline
 from aws_cdk import aws_codepipeline_actions as cpactions
 from aws_cdk import pipelines
 
-from .hello_lambda_webservice_stage import HelloWebserviceStage
+from .hello_lambda_webservice_stage import HelloLambdaWebserviceStage
 
 class PipelineStack(core.Stack):
   def __init__(self, scope: core.Construct, id: str, **kwargs):
