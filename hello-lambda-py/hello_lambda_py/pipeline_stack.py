@@ -14,14 +14,14 @@ class PipelineStack(core.Stack):
 
     pipeline = pipelines.CdkPipeline(self, 'Pipeline',
       cloud_assembly_artifact=cloud_assembly_artifact,
-      pipeline_name='MtlsAuthnPipeline',
+      pipeline_name='Pipeline-CI-CD-QuickSight',
 
       source_action=cpactions.GitHubSourceAction(
         action_name='GitHub',
         output=source_artifact,
-        oauth_token=core.SecretValue.secrets_manager('github-token-playground-mtls-authn'),
+        oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_PIPELINE'),
         owner='chilcano',
-        repo='pipeline-mtls-authn',
+        repo='aws-cdk-pipelines-examples',
         trigger=cpactions.GitHubTrigger.POLL),
 
       synth_action=pipelines.SimpleSynthAction(
