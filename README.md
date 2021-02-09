@@ -1,26 +1,35 @@
 
-# Hello Lambda CodePipeline in CDK Python
+# CDK Python Pipeline for HelloLambda
 
 ## Steps
 
 ### 1. Initialize your cdk python project
 
 ```sh
-$ mkdir lambda-py; cd lambda-py
+$ mkdir hello-lambda-py 
+$ cd hello-lambda-py
 $ cdk init --language=python
 
+# remove older .venv
 $ deactivate
 
+# create .venv only if you don have it
 $ python3 -m venv .venv
 
+# activate
 $ source .venv/bin/activate
-
-# only when cdk project is created
-$ pip install aws-cdk.core aws-cdk.pipelines aws-cdk.aws-codepipeline aws-cdk.aws-codepipeline-actions aws-cdk.aws-codedeploy aws-cdk.aws-apigateway aws-cdk.aws-lambda pytest requests pylint
-$ pip freeze > requirements.txt
 
 # only if you have populate this file
 $ pip install -r requirements.txt
+
+# only when cdk project is created
+$ pip install aws_cdk.pipelines aws_cdk.aws_codepipeline aws_cdk.aws_codepipeline_actions aws_cdk.aws_codecommit aws_cdk.aws_codedeploy aws_cdk.aws_codebuild
+$ aws_cdk.aws_apigateway aws_cdk.aws_lambda pytest requests pylint
+
+# freeze py packages
+$ pip freeze > requirements.txt
+
+
 ```
 
 ### 2. Write your code
