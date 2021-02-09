@@ -91,25 +91,26 @@ passing the Lambda code from the `HelloLambdaStack` object.
 ### Step 5. Deploying the pipeline
 
 
-
 ```sh
 # push the changes
-git add --all
-git commit -m "add CDK app"
-git push
-``` 
+$ git add --all
+$ git commit -m "add CDK app"
+$ git push
 
-```sh
 # configure your AWS account
-export AWS_ACCESS_KEY_ID="AKIA...."
-export AWS_SECRET_ACCESS_KEY="AvO..."
-export AWS_DEFAULT_REGION="eu-west-2"
-``` 
+$ export AWS_ACCESS_KEY_ID="AKIA...."
+$ export AWS_SECRET_ACCESS_KEY="AvO..."
+$ export AWS_DEFAULT_REGION="eu-west-2"
 
-```sh
+$ cdk synth
+Successfully synthesized to /home/roger/gitrepos/aws-cdk-pipeline-examples/hello-lambda-ts/cdk.out
+Supply a stack id (HelloLambdaStack, PipelineDeployingLambdaStack) to display its template.
+
 # list all stacks
-cdk list
+$ cdk list
+HelloLambdaStack
+PipelineDeployingLambdaStack
 
 # deploy the pipeline
-cdk deploy PipelineDeployingLambdaStack
+$ cdk deploy PipelineDeployingLambdaStack
 ``` 
