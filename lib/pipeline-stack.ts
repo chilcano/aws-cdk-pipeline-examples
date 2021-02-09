@@ -74,6 +74,7 @@ export class PipelineStack extends Stack {
     const lambdaBuildOutput = new codepipeline.Artifact('LambdaBuildOutput');
 
     new codepipeline.Pipeline(this, 'Pipeline', {
+      pipelineName: 'CDK-Pipeline-HelloLambda-TypeScript',
       stages: [
         {
           stageName: 'Source',

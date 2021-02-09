@@ -18,7 +18,7 @@ export class HelloLambdaTsStack extends cdk.Stack {
       code: this.lambdaCode,
       handler: 'index.main',
       runtime: lambda.Runtime.NODEJS_10_X,
-      description: `HelloLambda function generated on: ${new Date().toISOString()}`,
+      description: `HelloLambda function generated on ${new Date().toISOString()}`,
     });
 
     const alias = new lambda.Alias(this, 'HelloLambdaAlias', {

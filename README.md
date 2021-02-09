@@ -112,3 +112,21 @@ PipelineDeployingLambdaStack
 # deploy the pipeline
 $ cdk deploy PipelineDeployingLambdaStack
 ``` 
+
+### Step 6. Testing 
+
+How to test if the `HelloLambda` functions has been deployed succesfully and how to execute it?
+
+* Option 1: Create a API Gateway Endpoint to the HelloLambda function. This requires modify existing HelloLambdaStack and deploy an API Gateway Endpoint.
+* Option 2: Invoke Lambda Function and Verify Results from AWS LAmbda Console. [See this guide](https://aws.amazon.com/getting-started/hands-on/run-serverless-code/).
+
+
+### Step 7. Cleaning 
+
+* Delete the `HelloLambdaStack` first using the AWS CloudFormation console.  
+* The IAM Role needed to delete `HelloLambdaStack` is provided by `PipelineDeployingLambdaStack`, so if you delete it first, you no longer have permission to destroy `HelloLambdaStack`.
+* Then you may delete the `HelloLambdaStack` and `PipelineDeployingLambdaStack`:
+  ```sh
+  $ cdk destroy HelloLambdaStack 
+  $ cdk destroy PipelineDeployingLambdaStack
+  ```
