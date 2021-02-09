@@ -82,7 +82,7 @@ export class PipelineStack extends Stack {
               actionName: 'GitHub_Source',
               output: sourceOutput,
               owner: 'chilcano',
-              oauthToken: SecretValue.secretsManager('github-token-playground-mtls-authn'),
+              oauthToken: SecretValue.secretsManager('GITHUB_TOKEN_PIPELINE'),
               //repo: 'aws-cdk-pipeline-examples',
               repo: props.repoName,
               branch: 'hello-lambda-ts'
