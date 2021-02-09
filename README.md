@@ -107,7 +107,9 @@ git push
 ``` 
 
 ```sh
-# deploy the pipeline
+# list all stacks
+cdk list
 
+# deploy the pipeline
 cdk deploy PipelineDeployingLambdaStack
 ``` 
