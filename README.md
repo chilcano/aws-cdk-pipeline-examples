@@ -74,12 +74,11 @@ dependencies and the TypeScript compiler, then builds the code. The output is th
 
 __This is where you'll need some changes if you use a Lambda function written in a language other than TypeScript.__
 
-
 ```sh
 $ touch lib/pipeline-stack.ts
 ``` 
 
-Noew, edit it.
+Now, edit it.
 
 ### Step 4. Main program
 
@@ -89,7 +88,6 @@ passing the Lambda code from the `HelloLambdaStack` object.
 
 
 ### Step 5. Deploying the pipeline
-
 
 ```sh
 # push the changes
