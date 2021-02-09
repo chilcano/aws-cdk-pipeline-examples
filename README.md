@@ -101,9 +101,9 @@ git push
 
 ```sh
 # configure your AWS account
-git add --all
-git commit -m "add CDK app"
-git push
+export AWS_ACCESS_KEY_ID="AKIA...."
+export AWS_SECRET_ACCESS_KEY="AvO..."
+export AWS_DEFAULT_REGION="eu-west-2"
 ``` 
 
 ```sh
