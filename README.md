@@ -121,12 +121,11 @@ How to test if the `HelloLambda` functions has been deployed succesfully and how
 * Option 2: Invoke Lambda Function and Verify Results from AWS LAmbda Console. [See this guide](https://aws.amazon.com/getting-started/hands-on/run-serverless-code/).
 
 
-### Step 7. Cleaning 
+### Step 7. Cleaning up
 
-* Delete the `HelloLambdaStack` first using the AWS CloudFormation console.  
-* The IAM Role needed to delete `HelloLambdaStack` is provided by `PipelineDeployingLambdaStack`, so if you delete it first, you no longer have permission to destroy `HelloLambdaStack`.
-* Then you may delete the `HelloLambdaStack` and `PipelineDeployingLambdaStack`:
+* Delete the `HelloLambdaDeploymentStack` first using the AWS CloudFormation console. Delecting it, the Lambda function will be removed.
+* Then you may delete the `PipelineDeployingLambdaStack`, destroying it, the pipeline will be removed.
   ```sh
-  $ cdk destroy HelloLambdaStack 
   $ cdk destroy PipelineDeployingLambdaStack
   ```
+* The S3 buckets created during the building and deployment must be removed manually.
