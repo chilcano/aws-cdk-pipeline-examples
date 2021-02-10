@@ -19,7 +19,7 @@ class PipelineStack(core.Stack):
       source_action=cpactions.GitHubSourceAction(
         action_name='GitHub',
         output=source_artifact,
-        oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_PIPELINE'),
+        oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_AWS_PIPELINE'),
         owner='chilcano',
         repo='aws-cdk-pipeline-examples',
         #branch='main',
