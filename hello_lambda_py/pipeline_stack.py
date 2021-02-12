@@ -19,7 +19,7 @@ class PipelineStack(core.Stack):
       source_action=cpactions.GitHubSourceAction(
         action_name='GitHub',
         output=source_artifact,
-        oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_AWS_PIPELINE'),
+        oauth_token=core.SecretValue.secrets_manager('GITHUB_TOKEN_AWS_ECS'),
         owner='chilcano',
         repo='aws-cdk-pipeline-examples',
         #branch='main',
@@ -33,6 +33,6 @@ class PipelineStack(core.Stack):
         synth_command='cdk synth'))
 
     pipeline.add_application_stage(HelloLambdaWebserviceStage(self, 'Pre-Prod', env={
-        'account': '601163517885',
+        'account': '601163517885',    ## Data acc
         'region': 'eu-west-2',
         }))
